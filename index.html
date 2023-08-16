@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<script src="js/js.js"></script>
+ <title>X-blog</title>
+ <style>
+ body {
+  background-image:url("2.png");
+  font-weight:70;
+  color:white;
+   }
+ a{
+   text-decoration:none;
+   }
+ * {
+   margin:0;
+   background:0;
+   padding:0;
+   border:0;
+   }
+
+ #text h3{
+   text-align:center;
+   color:white;
+   height:40px;
+   background-color:skyblue;
+   font-size:30px;
+   font-weight:120;
+   opacity:0.8;
+   }
+ #pict {
+   width:100px;
+   box-shadow:2px 2px 2px 2px #00fdff;
+   height:100px;
+   opacity:1;
+   border-radius:80%;
+   margin-top:15px;
+   margin-left:10px;
+   border:3px solid #003bff;
+   }
+ .box {
+   position:relative;
+   background-color:rgba(255,255,255,0.15);
+   backdrop-filter:blur(10px);
+   width:400px;
+   opacity:0.8;
+   border-radius:50px;
+   box-shadow:0 0 10px rgba(0,0,0,0.2);
+   margin: 0 auto;
+   height:590px;
+   }
+ #name {
+   color:black;
+   box-shadow:0 0 10px rgba(0,0,0,0.2);
+   border-radius:15px;
+   width:50%;
+   margin:0 auto;
+   }
+ #black {
+   width:200px;
+   padding:5px 5px;
+   margin-top:15px;
+   border:1px solid white;
+   text-align:center;
+   }
+ .box .box2 {
+   text-align:center;
+   border-radius:50px;
+   color:white;
+   font-weight:190;
+   font-size:25px;
+   background-color:rgba(255,255,255,0.1);
+   }
+ .box p{
+   margin-top:15px;
+   }
+ #hr {
+   border-bottom:0.5px solid black;
+   margin-top:35px;
+   }
+ #welcome {
+   text-align:center;
+   margin-top:15px;
+   background-color:skyblue;
+   color:white;
+   opacity:0.8;
+   height:30px;
+   font-size:23px;
+   font-weight:90;
+   }
+ .textblog {
+   text-align:center;
+   font-weight:90;
+   color:white;
+   }
+ #img1 {
+   width:395px;
+   border-radius:50px;
+   height:20px:
+   }
+.date {
+  text-align:center;
+  color:white;
+  font-weight:100;
+  }
+#lx {
+  display:flex;
+  justify-content:space-around;
+  }
+#lx div {
+  width:60px;
+  height:60px;
+  }
+.mryy {
+  text-align:center;
+  color:white;
+  font-weight:100;
+  }
+ </style>
+  </head>
+  <body class="body">	
+
+	<div id="text">
+ 		<h3>X-blog</h3> <!--博客名称-->
+    </div>
+    <div id="welcome">
+    <i>Welcome to our live blog</i>
+    </div>
+    <br>
+    <div></div>
+    <link rel="stylesheet" type="text/css" href="CSS/2.css">
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <!--菜单栏选项-->
+  <a href="#">加入我们</a>
+  <a href="https://b23.tv/uL6QJK1">小鲨——MC的B站主页</a>
+  <a href="sha.html">小鲨——鲨 bee的博客</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <div class="box">
+       <div class="box2">
+           <center>
+               <img id="pict"src="sha.jpg"/>
+               <img id="pict"src="img/a.png"/>
+           </center>
+           <p id="name">小鲨——MC <br>小鲨-鲨 bee</p> <!--昵称-->
+       </div>
+       <br>
+       <center>
+       <a style="background-color:rgba(255,255,255,0.1);box-shadow:0 0 10px rgba(0,0,0,0.2);margin-top:5px;color:white;border-radius:10px;"href="blog.html">点击进入小鲨——MC的博客</a>
+       </center>
+       <br>
+       <div class="textblog"></div>
+       <div id="hr"></div>
+       <div class="textblog">
+       &copy 小鲨——MC & 小鲨——编程频道 & 小鲨-鲨 bee<!--开发者昵称-->
+       </div>
+       <div class="date"></div>
+       <div id="lx">
+       </div>
+    </div>
+    <script>
+    let a = Math.floor(Math.random()*7);
+    let b = "";
+   if(a == 1){
+    b = "成功没有捷径，只有坚持不懈的努力。";
+    }else if(a == 2){
+    b ="每一天都是一个新的开始。";
+    }else if(a == 3){
+    b = "坚持下去，胜利就在前方。";
+    }else if(a == 4){
+    b = "相信自己，你比想象中更强大";
+    }else if(a == 5){
+    b = "生活没有绝对，只有相对；生活没有对错，只有平衡。";
+    }else if(a == 6){
+    b = "追求卓越，成功就会在不远处。";
+    }else if(a == 7){
+    b = "微笑面对生活，生活也会对你微笑。";
+    }else if(a == 0){
+    b = "生活因磨砺而美丽，人生因拼搏而精彩。";
+    }
+  let doc = document.querySelector(".textblog").innerHTML = b;
+    /*日期*/
+    var time = new Date()
+    var year = time.getFullYear()
+    var month = time.getMonth() + 1
+    var date = time.getDate()
+    var nowtime = year+"-"+month+"-"+date
+    document.querySelector(".date").innerHTML = "form 2023-8-1 to " + nowtime
+    </script> 
+ </body>
+</html>
